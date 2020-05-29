@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registro de Clientes</h2>
+            <form [formGroup]="formGroup">
+
+                <form>
+                    <div class="form-group">
+                        <label>Tipo de Identificacion</label>
+                        <select type=text name="tipoId" formControlName="tipoId" class="form-control"
+                            [ngClass]="{ 'is-invalid ' : control.tipoId.errors}">
+                        <option>Cedula de Ciudadania</option>
+                        <option>N I T </option>
+                        <option>Pasaporte</option>
+                        <option>Cedula Extranjeria</option>
+                        <div *ngIf="control.tipoId.errors" class="invalid-feedback">
+                            <div *ngIf="control.tipoId.errors.required">Identificacion requerida</div>
+                        </div>
+                        </select>
+                    </div>
+                </form>
+
+                <div class="form-group">
+                    <label>Id Cliente</label>
+                    <input type="number" name="idCliente" formControlName="idCliente" class="form-control"
+                        [ngClass]="{ 'is-invalid ' : control.idCliente.errors}" />
+                    <div *ngIf="control.idCliente.errors" class="invalid-feedback">
+                        <div *ngIf="control.idCliente.errors.required">Identificacion requerida</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Nombre del Cliente</label>
+                    <input type="text" name="nCliente" formControlName="nCliente" class="form-control"
+                        [ngClass]="{ 'is-invalid': control.nCliente.errors}" />
+                    <div *ngIf="control.nCliente.errors" class="invalid-feedback">
+                        <div *ngIf="control.nCliente.errors.required">El nombre es requierido</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Telefono </label>
+                    <input type="number" name="telefono" formControlName="telefono" class="form-control"
+                        [ngClass]="{ 'is-invalid': control.telefono.errors}" />
+                    <div *ngIf="control.telefono.errors" class="invalid-feedback">
+                        <div *ngIf="control.telefono.errors.required">Telefono requerido</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Direccion</label>
+                    <input type="text" name="direccion" formControlName="direccion" class="form-control"
+                        [ngClass]="{ 'is-invalid': control.direccion.errors}" />
+                    <div *ngIf="control.direccion.errors" class="invalid-feedback">
+                        <div *ngIf="control.direccion.errors.required">Direccion requerida</div>
+                    </div>
+                </div>
+
+                <!-- Ojo aqui va el alquiler-->
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="onSubmit()"
+                    [disabled]="formGroup.invalid">Registrar</button>
+                    <button class="btn btn-secondary" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

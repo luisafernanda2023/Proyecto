@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Registro de Equipos</h2>
+            <form>
+
+                <form>
+                    <div class="form-group">
+                        <label>Id del Equipo</label>
+                    <select type = text name="idEquipo" [(ngModel)]="equipo.idEquipo" class="form-control" >
+                        <option>Est-100</option>
+                        <option>Niv-200 </option>
+                        <option>Teo-300 </option>
+                        <option>GPS-Nav-400 </option>
+                        <option>GPS-SubM-500 </option>
+                        <option>RTK-600 </option>
+                    </select>
+                    </div>
+                  </form> 
+               
+                  <form>
+                    <div class="form-group">
+                        <label>Nombre del Equipo ***- </label>
+                    <select type = text name="nEquipo" [(ngModel)]="equipo.nEquipo" class="form-control" (click)="handleEquipoChange()">
+                        <option>Estacion</option>
+                        <option>Nivel </option>
+                        <option>Teodolito </option>
+                        <option>GPS Navegador </option>
+                        <option>GPS SubMetrico </option>
+                        <option>RTK GPS Doble Frecuencia </option>
+                    </select>
+                    </div>
+                  </form> 
+
+                <form>
+                    <div class="form-group">
+                        <label>Marca</label>
+                    <select type = text name="marca" [(ngModel)]="equipo.marca" class="form-control" >
+                        <option>TopCon</option>
+                        <option>Sokkia </option>
+                        <option *ngFor="let item of marcas" [ngValue]="item">{{item}}</option>
+                    </select>
+                    </div>
+                  </form> 
+
+                <form>
+                    <div class="form-group">
+                        <label>Tiempo de Alquiler</label>
+                    <select type = text name="tiempoAlquiler" [(ngModel)]="equipo.tiempoAlquiler" class="form-control" >
+                        <option>Dia</option>
+                        <option>Mes </option>
+                        <option>Trimestre</option>
+                        <option>Semestre</option>
+                    </select>
+                    </div>
+                  </form>
+
+                <div class="form-group">
+                    <label>Valor</label>
+                    <input type="number" name="valor" [(ngModel)]="equipo.valor" class="form-control" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary mr-1" (click)="add()">Registrar</button>
+                    <button class="btn btn-secondary" type="reset">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

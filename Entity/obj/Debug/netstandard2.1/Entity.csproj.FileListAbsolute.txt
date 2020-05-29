@@ -1,0 +1,16 @@
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\bin\Debug\netstandard2.1\Entity.dll
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\bin\Debug\netstandard2.1\Entity.pdb
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\obj\Debug\netstandard2.1\Entity.dll
+D:\Desktop\Cyndy USB\ProyectoWeb2020\Entity\obj\Debug\netstandard2.1\Entity.pdb
+D:\alquiler\AlquilerTopografico-Master-\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+D:\alquiler\AlquilerTopografico-Master-\Entity\bin\Debug\netstandard2.1\Entity.dll
+D:\alquiler\AlquilerTopografico-Master-\Entity\bin\Debug\netstandard2.1\Entity.pdb
+D:\alquiler\AlquilerTopografico-Master-\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+D:\alquiler\AlquilerTopografico-Master-\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+D:\alquiler\AlquilerTopografico-Master-\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+D:\alquiler\AlquilerTopografico-Master-\Entity\obj\Debug\netstandard2.1\Entity.dll
+D:\alquiler\AlquilerTopografico-Master-\Entity\obj\Debug\netstandard2.1\Entity.pdb
