@@ -9,7 +9,7 @@ export class FiltroclientePipe implements PipeTransform {
   transform(cliente: Cliente[], searchText: string): any {
     if (searchText == null) return cliente;
     return cliente.filter(p =>
-    p.nCliente.toLowerCase()
+    p.nombre.toLowerCase()
     .indexOf(searchText.toLowerCase()) !== -1);
   }
 

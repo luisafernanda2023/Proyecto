@@ -1,8 +1,8 @@
 export class Cliente {
     tipoId: string;
-    idCliente: number;
-    nCliente: string;
-    telefono: number;
+    id: string;
+    nombre: string;
+    telefono: string;
     direccion: string;
-    alquiler: number;
+    email:string;
 }

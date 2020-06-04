@@ -17,32 +17,51 @@ namespace alquilerTopografia_master.Controllers
     [ApiController]
     public class AlquilerController : ControllerBase
     {
-        private readonly AlquilerService _alquilerService;
+        private readonly AlquilerService _alqService;
+        private readonly ClienteService _clService;
+        private readonly EquipoService _eqService;
+
+
         public AlquilerController(AlquilerContext context)
         {
-            _alquilerService = new AlquilerService(context);
+            _alqService = new AlquilerService(context);
         }
 
         // GET: api/Alquiler
         [HttpGet]
         public IEnumerable<AlquilerViewModel> Gets()
         {
-            var alquilers = _alquilerService.ConsultarTodosAlquiler().Select(p => new AlquilerViewModel());
+            var alquilers = _alqService.ConsultarTodosAlquiler().Select(p => new AlquilerViewModel());
             return alquilers;
         }
 
         // POST: api/Alquiler
         [HttpPost]
+        public ActionResult<AlquilerViewModel> Post(AlquilerInputModel alqInput)
+        {
+            Alquiler alq = MapearAlquiler(alqInput);
+            var response = _alqService.Guardar(alq);
+            if (response.Error)
+            {
+                return BadRequest(response.Mensaje);
+            }
+            return Ok(response.Alquiler);
+        }
+
         
         //
-        private Alquiler MapearAlquiler(AlquilerInputModel alquilerInput)
+        private Alquiler MapearAlquiler(AlquilerInputModel Input)
         {
             var alquiler = new Alquiler
             {
-                AlquilerId = alquilerInput.AlquilerId,
-                EquipoId = alquilerInput.EquipoId,
-                TiempoAlquiler = alquilerInput.TiempoAlquiler
+                Id = Input.Id,
+                Inicio = Input.Inicio,
+                Final = Input.Final,
+                Tiempo = (Input.Inicio - Input.Final).TotalDays,
+                Valor = Input.CalcularValor(),
+                ClienteId =Input.Cliente.Id
             };
+            
             return alquiler;
 
         }

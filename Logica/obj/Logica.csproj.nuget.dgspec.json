@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\alquiler\\AlquilerTopografico-Master-\\Logica\\Logica.csproj": {}
+    "C:\\Users\\Developer\\Desktop\\Topografía\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "D:\\alquiler\\AlquilerTopografico-Master-\\Datos\\Datos.csproj": {
+    "C:\\Users\\Developer\\Desktop\\Topografía\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\alquiler\\AlquilerTopografico-Master-\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\Developer\\Desktop\\Topografía\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\sindy\\.nuget\\packages\\",
-        "outputPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Datos\\obj\\",
+        "projectPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sindy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\Entity.csproj": {
-                "projectPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\Entity.csproj"
+              "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj"
               }
             }
           }
@@ -68,21 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\Entity.csproj": {
+    "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\sindy\\.nuget\\packages\\",
-        "outputPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\obj\\",
+        "projectPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sindy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -124,21 +124,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\alquiler\\AlquilerTopografico-Master-\\Logica\\Logica.csproj": {
+    "C:\\Users\\Developer\\Desktop\\Topografía\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\alquiler\\AlquilerTopografico-Master-\\Logica\\Logica.csproj",
+        "projectUniqueName": "C:\\Users\\Developer\\Desktop\\Topografía\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Logica\\Logica.csproj",
-        "packagesPath": "C:\\Users\\sindy\\.nuget\\packages\\",
-        "outputPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Logica\\obj\\",
+        "projectPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Logica\\Logica.csproj",
+        "packagesPath": "C:\\Users\\Developer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sindy\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Developer\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
@@ -149,11 +149,11 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\alquiler\\AlquilerTopografico-Master-\\Datos\\Datos.csproj": {
-                "projectPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Datos\\Datos.csproj"
+              "C:\\Users\\Developer\\Desktop\\Topografía\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Datos\\Datos.csproj"
               },
-              "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\Entity.csproj": {
-                "projectPath": "D:\\alquiler\\AlquilerTopografico-Master-\\Entity\\Entity.csproj"
+              "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj"
               }
             }
           }
@@ -181,7 +181,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

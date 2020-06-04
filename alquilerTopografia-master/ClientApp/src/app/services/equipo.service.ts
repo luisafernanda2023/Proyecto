@@ -1,15 +1,14 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Equipo } from 'src/app/equipos/models/equipo';
+import { HandleHttpErrorService } from '../@base/servicio/handle-http-error.service';
+import { Equipo } from '../clientes/models/equipo';
 import { Observable } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
-import { HandleHttpErrorService } from 'src/app/@base/servicio/handle-http-error.service';
+import { tap, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EquipoService {
-  
   baseUrl: string;
   constructor(
     private http: HttpClient,
@@ -17,7 +16,6 @@ export class EquipoService {
     private handleErrorService: HandleHttpErrorService) {
     this.baseUrl = baseUrl;
   }
-
   get(): Observable<Equipo[]> {
     return this.http.get<Equipo[]>(this.baseUrl + 'api/Equipo')
       .pipe(
@@ -25,7 +23,6 @@ export class EquipoService {
         catchError(this.handleErrorService.handleError<Equipo[]>('Consultar Equipo', null))
       );
   }
-  
   post(equipo: Equipo): Observable<Equipo> {
     return this.http.post<Equipo>(this.baseUrl + 'api/Equipo', equipo)
       .pipe(

@@ -7,13 +7,12 @@ namespace Entity
     public class Cliente
     {
         [Key]
-        public long ClienteId { get; set; }
+        public string Id { get; set; }
         public string TipoId { get; set; }
-        public string NCliente { get; set; }
-        public int Telefono { get; set; }
+        public string Nombre { get; set; }
+        public string Telefono { get; set; }
         public string Direccion { get; set; }
-
-        public List<Alquiler> Alquilers { get; } = new List<Alquiler>();
+        public string Email { get; set; }
 
     }
 }

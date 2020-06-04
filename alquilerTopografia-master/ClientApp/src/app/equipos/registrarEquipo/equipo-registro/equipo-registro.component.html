@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <h2>Registro de Equipos</h2>
-            <form>
+            <form [formGroup]="formGroup">
 
-                <form>
+                <!--<form>
                     <div class="form-group">
                         <label>Id del Equipo</label>
                     <select type = text name="idEquipo" [(ngModel)]="equipo.idEquipo" class="form-control" >
@@ -16,48 +16,23 @@
                         <option>RTK-600 </option>
                     </select>
                     </div>
-                  </form> 
+                  </form> -->
                
-                  <form>
-                    <div class="form-group">
-                        <label>Nombre del Equipo ***- </label>
-                    <select type = text name="nEquipo" [(ngModel)]="equipo.nEquipo" class="form-control" (click)="handleEquipoChange()">
-                        <option>Estacion</option>
-                        <option>Nivel </option>
-                        <option>Teodolito </option>
-                        <option>GPS Navegador </option>
-                        <option>GPS SubMetrico </option>
-                        <option>RTK GPS Doble Frecuencia </option>
-                    </select>
-                    </div>
-                  </form> 
-
-                <form>
-                    <div class="form-group">
-                        <label>Marca</label>
-                    <select type = text name="marca" [(ngModel)]="equipo.marca" class="form-control" >
-                        <option>TopCon</option>
-                        <option>Sokkia </option>
-                        <option *ngFor="let item of marcas" [ngValue]="item">{{item}}</option>
-                    </select>
-                    </div>
-                  </form> 
-
-                <form>
-                    <div class="form-group">
-                        <label>Tiempo de Alquiler</label>
-                    <select type = text name="tiempoAlquiler" [(ngModel)]="equipo.tiempoAlquiler" class="form-control" >
-                        <option>Dia</option>
-                        <option>Mes </option>
-                        <option>Trimestre</option>
-                        <option>Semestre</option>
-                    </select>
-                    </div>
-                  </form>
+                <div class="form-group">
+                    <label>Nombre del Equipo</label>
+                    <input type="text" formControlName="nombre" class="form-control">
+                </div>
 
                 <div class="form-group">
-                    <label>Valor</label>
-                    <input type="number" name="valor" [(ngModel)]="equipo.valor" class="form-control" />
+                    <label>Marca</label>
+                    <select type = text name="marca" formControlName="marca" class="form-control">
+                        <option *ngFor="let item of marcas" value="item.nombre">{{item.nombre}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Valor x día</label>
+                    <input type="number" name="valor" formControlName="valor" class="form-control"/>
                 </div>
                 <div class="text-center">
                     <button class="btn btn-primary mr-1" (click)="add()">Registrar</button>

@@ -9,21 +9,19 @@
 <table class="table table-striped" *ngIf='equipos && equipos.length'>
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Id Equipo</th>
-            <th scope="col">Nombre Equipo</th>
-            <th scope="col">Marca </th>
-            <th scope="col">Tiempo Alquiler</th>
+            <!--<th scope="col">#</th>-->
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Marca</th>
             <th scope="col">Valor</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let equipo of equipos|filtroEquipo:searchText;index as i ">
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ equipo.idEquipo }} </td>
-            <td>{{ equipo.nEquipo }}</td>
-            <td>{{ equipo.marca }}</td>
-            <td>{{ equipo.tiempoAlquiler }}</td>
+            <!--<th scope="row">{{ i + 1 }}</th>-->
+            <td>{{ equipo.id }} </td>
+            <td>{{ equipo.nombre }}</td>
+            <td>{{ equipo.marca.nombre }}</td>
             <td>{{ equipo.valor }}</td>
         </tr>
     </tbody>

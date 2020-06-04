@@ -25,17 +25,19 @@ export class ClienteRegistroComponent implements OnInit {
   private buildForm() {
 
     this.cliente = new Cliente();
-    this.cliente.tipoId = '';
-    this.cliente.idCliente = 0;
-    this.cliente.nCliente = '';
-    this.cliente.telefono = 0;
+    this.cliente.tipoId = 'CC';
+    this.cliente.id = '';
+    this.cliente.nombre = '';
+    this.cliente.telefono = '';
     this.cliente.direccion = '';
+    this.cliente.email = '';
     this.formGroup = this.formBuilder.group({
       tipoId: [this.cliente.tipoId, Validators.required],
-      idCliente: [this.cliente.idCliente, Validators.required],
-      nCliente: [this.cliente.nCliente, Validators.required],
+      id: [this.cliente.id, Validators.required],
+      nombre: [this.cliente.nombre, Validators.required],
       telefono: [this.cliente.telefono, [Validators.required]],
-      direccion: [this.cliente.direccion, [Validators.required]]
+      direccion: [this.cliente.direccion, [Validators.required]],
+      email: [this.cliente.email, [Validators.email]],
     });
 
   }

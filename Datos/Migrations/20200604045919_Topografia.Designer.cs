@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(AlquilerContext))]
-    [Migration("20200522004111_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200604045919_Topografia")]
+    partial class Topografia
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,88 +23,85 @@ namespace Datos.Migrations
 
             modelBuilder.Entity("Entity.Alquiler", b =>
                 {
-                    b.Property<int>("AlquilerId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
+                    b.Property<string>("ClienteId")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<long?>("ClienteId1")
-                        .HasColumnType("bigint");
+                    b.Property<DateTime>("Final")
+                        .HasColumnType("datetime2");
 
-                    b.Property<int>("EquipoId")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("Inicio")
+                        .HasColumnType("datetime2");
 
-                    b.Property<int>("TiempoAlquiler")
-                        .HasColumnType("int");
+                    b.Property<double>("Tiempo")
+                        .HasColumnType("float");
 
                     b.Property<double>("Valor")
                         .HasColumnType("float");
 
-                    b.HasKey("AlquilerId");
-
-                    b.HasIndex("ClienteId1");
-
-                    b.HasIndex("EquipoId");
+                    b.HasKey("Id");
 
                     b.ToTable("Alquilers");
                 });
 
             modelBuilder.Entity("Entity.Cliente", b =>
                 {
-                    b.Property<long>("ClienteId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Direccion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NCliente")
+                    b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Telefono")
-                        .HasColumnType("int");
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TipoId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ClienteId");
+                    b.HasKey("Id");
 
                     b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("Entity.Equipo", b =>
                 {
-                    b.Property<int>("EquipoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Marca")
+                    b.Property<string>("MarcaId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NEquipo")
+                    b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("EquipoId");
+                    b.Property<double>("Valor")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Equipos");
                 });
 
-            modelBuilder.Entity("Entity.Alquiler", b =>
+            modelBuilder.Entity("Entity.Marca", b =>
                 {
-                    b.HasOne("Entity.Cliente", null)
-                        .WithMany("Alquilers")
-                        .HasForeignKey("ClienteId1");
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasOne("Entity.Equipo", null)
-                        .WithMany("Alquilers")
-                        .HasForeignKey("EquipoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasKey("Nombre");
+
+                    b.ToTable("Marcas");
                 });
 #pragma warning restore 612, 618
         }

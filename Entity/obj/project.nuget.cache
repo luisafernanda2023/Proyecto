@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "BlaWfEbi6UKItYXbNzRitfdzWNwZyFoAs94knXCapZf0fjL2Qg7+L1r1fFgFs5dmXt+1Vx4jW4N6TWf2Sp/pIw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Developer\\Desktop\\Topografía\\Entity\\Entity.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Developer\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

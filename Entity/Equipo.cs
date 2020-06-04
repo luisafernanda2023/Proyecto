@@ -9,13 +9,14 @@ namespace Entity
     public class Equipo
     {
         [Key]
-        public int EquipoId { get; set; }
-        public string NEquipo { get; set; }
-        public string Marca { get; set; }
-        public double Vrdia  { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public Marca Marca { get; }
+        public string MarcaId { get; set; }
+        public double Valor  { get; set; } //REPRESENTA VALOR POR DÍAS
         
 
-        public void MarcaEquipo()
+        /*public void MarcaEquipo()
         {
 
             if (EquipoId.Equals("Est-100") && NEquipo.Equals("Estacion"))
@@ -66,9 +67,7 @@ namespace Entity
             {
                 Marca="Sokkia";
             }
-        }
-
-        public List<Alquiler> Alquilers { get; } = new List<Alquiler>();
+        }*/
        
     }
 }

@@ -4,7 +4,7 @@
   >
  
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">Alquiler Topografia Master</a>
+      <a class="navbar-brand" [routerLink]="['/']">Topografia</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -41,23 +41,29 @@
           
           <li class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark" [routerLink]="['/clienteConsulta']"
-            >Consulta Cliente</a
+            >Bus Cliente</a
             >
             </li>
 
             <li class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark" [routerLink]="['/clienteRegistro']"
-            >Registro Cliente</a
+            >Reg Cliente</a
             >
             </li>
             <li class="nav-item" [routerLinkActive]="['link-active']">
               <a class="nav-link text-dark" [routerLink]="['/equipoConsulta']"
-              >Consulta Equipo</a
+              >Bus Equipo</a
               >
               </li>
               <li class="nav-item" [routerLinkActive]="['link-active']">
               <a class="nav-link text-dark" [routerLink]="['/equipoRegistro']"
-              >Registro Equipo</a
+              >Reg Equipo</a
+              >
+              </li>
+              
+              <li class="nav-item" [routerLinkActive]="['link-active']">
+              <a class="nav-link text-dark" (click)="addMarca()"
+              >Marca</a
               >
               </li>
         </ul>
